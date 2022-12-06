@@ -1,6 +1,6 @@
 package br.edu.infnet.infnetappgateway.infrastructure.integration.candidate;
 
-import br.edu.infnet.infnetappgateway.domain.data.model.voting.CandidateResponse;
+import br.edu.infnet.infnetappgateway.infrastructure.data.model.candidate.CandidateDocumentResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,5 +14,5 @@ public interface CandidateClient {
             path = "/voting/v1/candidate",
             produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE)
-    List<CandidateResponse> getCandidates();
+    List<CandidateDocumentResponse> getCandidates();
 }

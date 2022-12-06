@@ -1,6 +1,6 @@
 package br.edu.infnet.infnetappgateway.domain.service.candidate;
 
-import br.edu.infnet.infnetappgateway.domain.data.model.voting.CandidateResponse;
+import br.edu.infnet.infnetappgateway.domain.data.model.candidate.Candidate;
 import br.edu.infnet.infnetappgateway.domain.repository.candidate.CandidateRepository;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ public class CandidateService {
         this.candidateRepository = candidateRepository;
     }
 
-    public List<CandidateResponse> getCandidates() {
+    public List<Candidate> getCandidates() {
         return candidateRepository.getCandidates();
     }
 }

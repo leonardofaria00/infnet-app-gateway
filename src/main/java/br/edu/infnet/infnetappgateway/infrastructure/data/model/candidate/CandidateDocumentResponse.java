@@ -1,12 +1,8 @@
-package br.edu.infnet.infnetappgateway.domain.data.model.voting;
+package br.edu.infnet.infnetappgateway.infrastructure.data.model.candidate;
 
-import java.math.BigInteger;
-
-public class CandidateResponse {
+public class CandidateDocumentResponse {
 
     private String uuid;
-
-    private BigInteger amountVote;
 
     private String name;
 
@@ -18,14 +14,6 @@ public class CandidateResponse {
 
     public void setUuid(String uuid) {
         this.uuid = uuid;
-    }
-
-    public BigInteger getAmountVote() {
-        return amountVote;
-    }
-
-    public void setAmountVote(BigInteger amountVote) {
-        this.amountVote = amountVote;
     }
 
     public String getName() {
