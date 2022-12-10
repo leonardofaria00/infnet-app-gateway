@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
-@FeignClient(name = "voting-api")
+@FeignClient(name = "${integration.api.voting.name}")
 public interface CandidateClient {
 
     @GetMapping(
-            path = "/voting/v1/candidate",
+            path = "${integration.api.voting.get-candidates}",
             produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE)
     List<CandidateDocumentResponse> getCandidates();
